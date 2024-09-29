@@ -11,6 +11,10 @@ import bodyParser from 'body-parser';
 const app = express();
 const port = 4000;
 
+app.get('/', (req, res) => {
+    res.send('Hello, world! The root route is working.');
+  });
+
 // Middleware
 app.use(express.json());
 app.use(cors());
